@@ -12,9 +12,8 @@
     <style>
       :root {
         --bg-deep: #020617;
-        --surface-glass: rgba(15, 23, 42, 0.7);
+        --surface-glass: rgba(15, 23, 42, 0.75);
         --accent-primary: #3b82f6;
-        --accent-secondary: #8b5cf6;
       }
       body {
         font-family: 'Plus Jakarta Sans', sans-serif;
@@ -26,14 +25,13 @@
       }
       .mono { font-family: 'JetBrains Mono', monospace; }
       
-      /* Advanced Glassmorphism */
       .command-surface {
         background: var(--surface-glass);
         backdrop-filter: blur(24px) saturate(160%);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.06);
         box-shadow: 
-          0 20px 50px -12px rgba(0, 0, 0, 0.5),
-          inset 0 1px 1px rgba(255, 255, 255, 0.05);
+          0 10px 40px -10px rgba(0, 0, 0, 0.5),
+          inset 0 1px 1px rgba(255, 255, 255, 0.03);
       }
       
       .gradient-bg {
@@ -41,34 +39,23 @@
         top: 0; left: 0; right: 0; bottom: 0;
         z-index: -1;
         background: 
-          radial-gradient(circle at 0% 0%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
-          radial-gradient(circle at 100% 100%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
-          radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 1) 0%, rgba(2, 6, 23, 1) 100%);
+          radial-gradient(circle at 5% 5%, rgba(59, 130, 246, 0.05) 0%, transparent 40%),
+          radial-gradient(circle at 95% 95%, rgba(139, 92, 246, 0.05) 0%, transparent 40%),
+          #020617;
       }
 
       .noise {
         position: fixed;
         top: 0; left: 0; width: 100%; height: 100%;
-        opacity: 0.03;
+        opacity: 0.025;
         pointer-events: none;
         z-index: 9999;
         background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3%3Cfilter id='noiseFilter'%3%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3%3C/filter%3%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3%3C/svg%3E");
       }
 
-      .shimmer {
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
-        background-size: 200% 100%;
-        animation: shimmer 3s infinite;
-      }
-
-      @keyframes shimmer {
-        0% { background-position: 200% 0; }
-        100% { background-position: -200% 0; }
-      }
-
       .custom-scrollbar::-webkit-scrollbar { width: 3px; }
       .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-      .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 10px; }
     </style>
     <script type="importmap">
     {
@@ -87,5 +74,7 @@
     <div class="noise"></div>
     <div class="gradient-bg"></div>
     <div id="root"></div>
+    <!-- Vite entry point -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
