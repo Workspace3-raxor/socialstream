@@ -1,0 +1,5 @@
+{
+  "name": "SocialStream AI Dashboard",
+  "description": "A high-performance social media content hub for businesses. Upload, process with AI via n8n, and track cross-platform engagement analytics.",
+  "requestFramePermissions": []
+}
