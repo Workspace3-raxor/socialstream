@@ -1,8 +1,8 @@
 
 import { PlatformConfig } from './types';
 
-export const SUPABASE_URL = 'https://djhmtdokbuxpmqaykoxz.supabase.co';
-export const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRqaG10ZG9rYnV4cG1xYXlrb3h6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg5Nzg3MzcsImV4cCI6MjA4NDU1NDczN30.qHTXy0BYA0WC1wyxp2jDWAp9TUQEBo0nwoUaBMD_ITY';
+export const SUPABASE_URL = 'https://gcytiezqslwjgsefrkxn.supabase.co';
+export const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjeXRpZXpxc2x3amdzZWZya3huIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk0Nzc5MTEsImV4cCI6MjA4NTA1MzkxMX0.oSJEyA-P2LXrSsSRTdAECgbPk3OKlKC1C_JhWcDVtZY';
 export const WEBHOOK_URL = 'https://pyrs.app.n8n.cloud/webhook/file-upload';
 
 export const SOCIAL_PLATFORMS: PlatformConfig[] = [
